@@ -4,6 +4,7 @@ $FONT_COLOR_LINK_PURPLE: #9146ff;
 $FONT_COLOR_LINK_PURPLE_HOVER: #a269ff;
 $FONT_COLOR_LINK_PURPLE_ACTIVE: #b68cff;
 $BACKGROUND_COLOR_DARK: #0E0E10;
+$BACKGROUND_COLOR_DARK_LIGHTER :#1F1F23;
 $SIZE_NAVBAR_HEIGHT: 50px;
 
 html,body,#___gatsby,#gatsby-focus-wrapper {
@@ -16,6 +17,7 @@ html {
     color: $FONT_COLOR_WHITE;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    overflow: hidden;
   }
   
   body {

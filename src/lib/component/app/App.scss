@@ -1,9 +1,9 @@
 @import "../../styles/_base.scss";
 
-.stepsContainer {
+.instructionsContainer {
     width: 70%;
     height: 100%;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: left;
