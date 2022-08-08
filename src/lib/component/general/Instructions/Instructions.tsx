@@ -1,7 +1,7 @@
 import React from "react";
-import "./FirstSteps.scss";
+import "./Instructions.scss";
 
-const FirstSteps: React.FC = () => {
+const Instructions: React.FC = () => {
     return (
         <>
             <span className="step">1. Choose your layout (up to 4 streams)</span>
@@ -12,4 +12,4 @@ const FirstSteps: React.FC = () => {
     )
 }
 
-export default FirstSteps
+export default Instructions
