@@ -1,9 +1,15 @@
 $FONT_FAMILY: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
-$BACKGROUND_COLOR_DARK: #0E0E10;
 $FONT_COLOR_WHITE: #EFEFF1;
 $FONT_COLOR_LINK_PURPLE: #9146ff;
 $FONT_COLOR_LINK_PURPLE_HOVER: #a269ff;
 $FONT_COLOR_LINK_PURPLE_ACTIVE: #b68cff;
+$BACKGROUND_COLOR_DARK: #0E0E10;
+$SIZE_NAVBAR_HEIGHT: 50px;
+
+html,body,#___gatsby,#gatsby-focus-wrapper {
+  height: 100%;
+  width: 100%;
+}
 
 html {
     background-color: $BACKGROUND_COLOR_DARK;
