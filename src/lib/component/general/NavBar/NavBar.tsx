@@ -1,20 +1,18 @@
-import React from "react";
-import "./NavBar.scss";
+import React from 'react';
+import './NavBar.scss';
 
 interface NavBarProps {
-    icon: string;
-    title: string;
+  icon: string;
+  title: string;
 }
 
-const NavBar: React.FC<NavBarProps> = ({icon,title}) => {
-    return (
-        <div className="navBar">
-            <div className="navBarIconContainer">
-            <img src={icon} className="navBarIcon"/>
-            </div>
-            <span className="navBarTitle">{title}</span>
-        </div>
-    )
-}
+const NavBar: React.FC<NavBarProps> = ({ icon, title }) => (
+  <div className="navBar">
+    <div className="navBarIconContainer">
+      <img src={icon} className="navBarIcon" alt="Page Icon" />
+    </div>
+    <span className="navBarTitle">{title}</span>
+  </div>
+);
 
-export default NavBar
+export default NavBar;
