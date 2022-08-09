@@ -1,0 +1,21 @@
+@import '../../../styles/_base.scss';
+
+.twitchEmbedsContainer {
+    height: 100%;
+    width: calc(100% - 340px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+}
+
+.twitchEmbedsContainer > :only-child {
+    grid-column: 1/-1;
+}
+
+iframe:last-child:nth-child(3) {
+    grid-column: 1/-1;
+}
+
+.twitchEmbed {
+    height: 100%;
+    width: 100%;
+}
