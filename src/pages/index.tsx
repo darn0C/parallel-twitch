@@ -1,8 +1,11 @@
 import React from 'react';
-import App from '../lib/component/app/App';
+import Layout from '../lib/component/layout/Layout';
+import Instructions from '../lib/component/general/Instructions/Instructions';
 
 const IndexPage = () => (
-  <App />
+  <Layout>
+    <Instructions />
+  </Layout>
 );
 
 export default IndexPage;
