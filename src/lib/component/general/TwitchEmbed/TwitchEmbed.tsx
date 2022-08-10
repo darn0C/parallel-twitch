@@ -10,22 +10,32 @@ interface TwitchEmbedProps {
 }
 
 const TwitchEmbed: React.FC<TwitchEmbedProps> = ({ streams }) => {
-  if (!streams) {
+  if (!streams || window === undefined) {
     return null;
   }
 
   return (
-    <div className="twitchEmbedsContainer">
-      {streams.map((stream, index) => (
+    <div className="twitchEmbedsLayout">
+      <div className="twitchVideoEmbedsContainer">
+        {streams.map((stream, index) => (
+          <iframe
+            key={stream.name}
+            title={`${stream.name}-${index + 1}`}
+            src={`https://player.twitch.tv/?channel=${stream.name}&parent=${window.location.hostname}`}
+            className="twitchVideoEmbed"
+            frameBorder="0"
+            allowFullScreen
+          />
+        ))}
+      </div>
+      <div className="twitchChatEmbedContainer">
         <iframe
-          key={stream.name}
-          title={`${stream.name}-${index + 1}`}
-          src={`https://player.twitch.tv/?channel=${stream.name}&parent=localhost`}
-          className="twitchEmbed"
+          title={`${streams[0].name}`}
+          src={`https://www.twitch.tv/embed/${streams[0].name}/chat?parent=${window.location.hostname}`}
+          className="twitchChatEmbed"
           frameBorder="0"
-          allowFullScreen
         />
-      ))}
+      </div>
     </div>
   );
 };
