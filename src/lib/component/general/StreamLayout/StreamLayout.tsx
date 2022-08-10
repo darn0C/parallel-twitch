@@ -6,8 +6,10 @@ interface StreamLayoutProps {
   setNumberOfStreamsChosen: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const StreamLayout: React.FC<StreamLayoutProps> = ({ numberOfScreens, setNumberOfStreamsChosen }) => {
-
+const StreamLayout: React.FC<StreamLayoutProps> = ({
+  numberOfScreens,
+  setNumberOfStreamsChosen,
+}) => {
   const onKeyDownHandler = (event: KeyboardEvent) => {
     if (event.key === 'Enter') {
       setNumberOfStreamsChosen(numberOfScreens + 1);

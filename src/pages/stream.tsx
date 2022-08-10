@@ -4,15 +4,21 @@ import TwitchEmbed from '../lib/component/general/TwitchEmbed/TwitchEmbed';
 
 const StreamPage = () => (
   <Layout>
-    <TwitchEmbed streams={[{
-      name: 'tsm_imperialhal',
-    }, {
-      name: 'knekro',
-    }, {
-      name: 'blooprint',
-    }, {
-      name: 'hiswattson',
-    }]}
+    <TwitchEmbed
+      streams={[
+        {
+          name: 'tsm_imperialhal',
+        },
+        {
+          name: 'knekro',
+        },
+        {
+          name: 'blooprint',
+        },
+        {
+          name: 'hiswattson',
+        },
+      ]}
     />
   </Layout>
 );
