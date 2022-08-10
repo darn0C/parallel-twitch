@@ -3,7 +3,7 @@ import NavBar from '../general/NavBar/NavBar';
 import pageIcon from '../../favicon/twitch.png';
 
 interface LayoutProps {
-  children: React.ReactElement;
+  children: React.ReactElement | React.ReactElement[];
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
