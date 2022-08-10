@@ -1,0 +1,10 @@
+@import '../../../styles/_base.scss';
+
+.streamLayoutSelectorContainer {
+    width: 30%;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
