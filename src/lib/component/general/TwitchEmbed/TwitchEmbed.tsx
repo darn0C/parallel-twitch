@@ -1,12 +1,8 @@
 import React from 'react';
 import './TwitchEmbed.scss';
 
-interface TwitchStreamer {
-  name: string;
-}
-
 interface TwitchEmbedProps {
-  streams: TwitchStreamer[];
+  streams: string[];
 }
 
 const TwitchEmbed: React.FC<TwitchEmbedProps> = ({ streams }) => {
@@ -19,9 +15,9 @@ const TwitchEmbed: React.FC<TwitchEmbedProps> = ({ streams }) => {
       <div className="twitchVideoEmbedsContainer">
         {streams.map((stream, index) => (
           <iframe
-            key={stream.name}
-            title={`${stream.name}-${index + 1}`}
-            src={`https://player.twitch.tv/?channel=${stream.name}&parent=${window.location.hostname}`}
+            key={stream}
+            title={`${stream}-${index + 1}`}
+            src={`https://player.twitch.tv/?channel=${stream}&parent=${window.location.hostname}`}
             className="twitchVideoEmbed"
             frameBorder="0"
             allowFullScreen
@@ -30,8 +26,8 @@ const TwitchEmbed: React.FC<TwitchEmbedProps> = ({ streams }) => {
       </div>
       <div className="twitchChatEmbedContainer">
         <iframe
-          title={`${streams[0].name}`}
-          src={`https://www.twitch.tv/embed/${streams[0].name}/chat?parent=${window.location.hostname}`}
+          title={`${streams[0]}`}
+          src={`https://www.twitch.tv/embed/${streams[0]}/chat?parent=${window.location.hostname}`}
           className="twitchChatEmbed"
           frameBorder="0"
         />

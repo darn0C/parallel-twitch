@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import './StreamInputModal.scss';
 
@@ -28,8 +29,9 @@ const StreamInputModal: React.FC<StreamInputModalProps> = ({
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     for (let i = 0; i < numberOfStreamsChosen; i += 1) {
-      const streamValue = (event.currentTarget.elements[i] as HTMLInputElement).value
-      streams.push(streamValue);
+      const streamValue = (event.currentTarget.elements[i] as HTMLInputElement)
+        .value;
+      streams.push(streamValue.substring(streamValue.lastIndexOf('/') + 1));
     }
   };
 
@@ -49,7 +51,9 @@ const StreamInputModal: React.FC<StreamInputModalProps> = ({
           }
           return streamInputs;
         })()}
-        <button type="submit">WATCH</button>
+        <Link to="/stream" state={{ streams }}>
+          <button type="submit">WATCH</button>
+        </Link>
       </form>
     </div>
   );
