@@ -8,9 +8,9 @@ interface StreamPageProps {
 }
 
 const StreamPage: React.FC<StreamPageProps> = ({ location }) => {
-  if (location.state === null) {
-    alert('You need a minimum of one stream to use the stream page');
-    return navigate('/');
+  if (location.state === null || location.state.streams.length ===  0) {
+    navigate('/');
+    return null;
   }
 
   return (
