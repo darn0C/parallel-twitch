@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <NavBar title={pageTitle} icon={pageIcon} />
-      <link rel="icon" href="svg/twitch.svg" sizes="any" type="image/svg+xml" />
+      <link rel="icon" href={pageIcon} sizes="any" type="image/svg+xml" />
       <title>{pageTitle}</title>
       {children}
     </>
