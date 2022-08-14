@@ -1,13 +1,17 @@
-$FONT_FAMILY: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
-$FONT_COLOR_WHITE: #EFEFF1;
+$FONT_FAMILY: 'Inter', 'Roobert', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$FONT_COLOR_WHITE: #efeff1;
 $FONT_COLOR_LINK_PURPLE: #9146ff;
 $FONT_COLOR_LINK_PURPLE_HOVER: #a269ff;
 $FONT_COLOR_LINK_PURPLE_ACTIVE: #b68cff;
-$BACKGROUND_COLOR_DARK: #0E0E10;
-$BACKGROUND_COLOR_DARK_LIGHTER :#1F1F23;
+$BACKGROUND_COLOR_DARK: #0e0e10;
+$BACKGROUND_COLOR_DARK_LIGHTER: #1f1f23;
 $SIZE_NAVBAR_HEIGHT: 50px;
+$SIZE_NAVBAR_ICON: 32px;
 
-html,body,#___gatsby,#gatsby-focus-wrapper {
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
   height: calc(100vh - $SIZE_NAVBAR_HEIGHT);
   width: 100%;
 }
@@ -19,7 +23,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-  
+
 body {
   margin: 0;
 }

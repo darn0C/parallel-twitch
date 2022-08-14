@@ -1,31 +1,40 @@
-@import "../../../styles/_base.scss";
+@import '../../../styles/_base.scss';
 
 .navBar {
-    height: $SIZE_NAVBAR_HEIGHT;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: $BACKGROUND_COLOR_DARK_LIGHTER;
+  height: $SIZE_NAVBAR_HEIGHT;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $BACKGROUND_COLOR_DARK_LIGHTER;
 }
 
 .navBarIconContainer {
-    height: 100%;
-    width: fit-content;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    padding: 12.5px;
+  height: 100%;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  padding: calc(($SIZE_NAVBAR_HEIGHT - $SIZE_NAVBAR_ICON) / 2);
 }
 
-.navBarIcon {
-    height: 100%;
-    width: 100%;
+.navBarButton {
+  border: 0;
+  padding: 0;
+  height: $SIZE_NAVBAR_ICON;
+  width: $SIZE_NAVBAR_ICON;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navBarButtonIcon {
+  height: 100%;
+  width: 100%;
 }
 
 .navBarTitle {
-    font-size: 30px;
-    color: $FONT_COLOR_LINK_PURPLE_ACTIVE;
-    margin: 0 auto;
+  font-size: 30px;
+  color: $FONT_COLOR_LINK_PURPLE;
+  margin: 0 auto;
 }

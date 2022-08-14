@@ -1,15 +1,10 @@
 @import '../../../styles/_base.scss';
 
-.instructionsContainer {
-  width: 70%;
+.streamLayoutSelectorContainer {
+  width: 30%;
   height: 100%;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-evenly;
-  text-align: left;
-  padding: 0 60px;
-}
-
-.step {
-  font-size: 24px;
+  align-items: center;
 }
