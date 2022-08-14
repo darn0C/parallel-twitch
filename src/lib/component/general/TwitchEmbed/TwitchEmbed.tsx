@@ -16,7 +16,7 @@ const TwitchEmbed: React.FC<TwitchEmbedProps> = ({ streams }) => {
         {streams.map((stream, index) => (
           <iframe
             key={stream}
-            title={`${stream}-${index + 1}`}
+            title={`${stream}-${index}`}
             src={`https://player.twitch.tv/?channel=${stream}&parent=${window.location.hostname}`}
             className="twitchVideoEmbed"
             frameBorder="0"

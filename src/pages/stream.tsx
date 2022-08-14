@@ -4,11 +4,22 @@ import Layout from '../lib/component/layout/Layout';
 import TwitchEmbed from '../lib/component/general/TwitchEmbed/TwitchEmbed';
 
 interface StreamPageProps {
-  location: any;
+  location: {
+    state: {
+      streams: string[];
+    };
+  };
 }
 
 const StreamPage: React.FC<StreamPageProps> = ({ location }) => {
-  if (location.state === null || location.state.streams.length ===  0) {
+  if (location.state === null) {
+    alert('You need a minimum of one stream to use the stream page');
+    navigate('/');
+    return null;
+  }
+
+  if (location.state.streams.includes('')) {
+    alert('Please make sure to include a stream for each input selected');
     navigate('/');
     return null;
   }
@@ -19,5 +30,4 @@ const StreamPage: React.FC<StreamPageProps> = ({ location }) => {
     </Layout>
   );
 };
-
 export default StreamPage;

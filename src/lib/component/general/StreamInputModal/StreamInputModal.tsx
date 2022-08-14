@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { navigate } from 'gatsby';
 import React from 'react';
 import './StreamInputModal.scss';
 
@@ -33,6 +33,7 @@ const StreamInputModal: React.FC<StreamInputModalProps> = ({
         .value;
       streams.push(streamValue.substring(streamValue.lastIndexOf('/') + 1));
     }
+    navigate('/stream', { state: { streams } });
   };
 
   return (
@@ -51,9 +52,7 @@ const StreamInputModal: React.FC<StreamInputModalProps> = ({
           }
           return streamInputs;
         })()}
-        <Link to="/stream" state={{ streams }}>
-          <button type="submit">WATCH</button>
-        </Link>
+        <button type="submit">WATCH</button>
       </form>
     </div>
   );
