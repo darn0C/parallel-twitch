@@ -16,10 +16,19 @@
   top: 0;
   left: 0;
   display: inline-block;
-  padding: 12.5px;
+  padding: calc(($SIZE_NAVBAR_HEIGHT - $SIZE_NAVBAR_ICON) / 2);
 }
 
-.navBarIcon {
+.navBarButton {
+  border: 0;
+  padding: 0;
+  height: $SIZE_NAVBAR_ICON;
+  width: $SIZE_NAVBAR_ICON;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navBarButtonIcon {
   height: 100%;
   width: 100%;
 }
