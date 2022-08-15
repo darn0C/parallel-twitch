@@ -38,21 +38,29 @@ const StreamInputModal: React.FC<StreamInputModalProps> = ({
 
   return (
     <div className="streamInputModal">
-      <button type="button" onClick={handleBackButton}>
-        BACK
+      <button type="button" className="backButton" onClick={handleBackButton}>
+        <span>BACK</span>
       </button>
       <h3>
         Enter the name of the stream{numberOfStreamsChosen > 1 ? 's' : ''}
       </h3>
       <form onSubmit={handleSubmit}>
-        {(() => {
-          const streamInputs = [];
-          for (let i = 0; i < numberOfStreamsChosen; i += 1) {
-            streamInputs.push(<input key={i} type="text" />);
-          }
-          return streamInputs;
-        })()}
-        <button type="submit">WATCH</button>
+        <div className="streamInputsWrapper">
+          {(() => {
+            const streamInputs = [];
+            for (let i = 0; i < numberOfStreamsChosen; i += 1) {
+              streamInputs.push(
+                <div className="streamInputContainer">
+                  <input key={i} type="text" />
+                </div>
+              );
+            }
+            return streamInputs;
+          })()}
+        </div>
+        <button type="submit" className="watchButton">
+          <span>WATCH</span>
+        </button>
       </form>
     </div>
   );
