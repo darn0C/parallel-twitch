@@ -26,11 +26,15 @@
   width: $SIZE_NAVBAR_ICON;
   background-color: transparent;
   cursor: pointer;
+  transition: width 0.2s ease-in-out;
+  &:hover {
+    width: 50px;
+  }
 }
 
 .navBarButtonIcon {
-  height: 100%;
-  width: 100%;
+  height: $SIZE_NAVBAR_ICON;
+  width: $SIZE_NAVBAR_ICON;
 }
 
 .navBarTitle {
