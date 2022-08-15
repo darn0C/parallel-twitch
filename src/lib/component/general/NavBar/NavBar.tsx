@@ -21,7 +21,10 @@ const NavBar: React.FC<NavBarProps> = ({ icon, title }) => (
     <span className="navBarTitle">{title}</span>
     <div className="authorContainer">
       <span>
-        Site created by <a href='https://github.com/darn0C'>Conrado Remon</a>
+        Site created by{' '}
+        <a href="https://github.com/darn0C" target="_blank" rel="noreferrer">
+          Conrado Remon
+        </a>
       </span>
     </div>
   </div>
